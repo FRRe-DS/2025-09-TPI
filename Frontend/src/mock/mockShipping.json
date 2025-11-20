@@ -1,0 +1,92 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "user_id": 11,
+      "status": "created",
+      "transport_type": "road",
+      "departure_postal_code": "C1000AAA",
+      "estimated_delivery_at": "2025-11-25T01:27:52.055Z",
+      "shipping_cost": 3630,
+      "cancelled_at": null,
+      "delivery_address_json": {
+        "city": "Resistencia",
+        "state": "Chaco",
+        "street": "Avenida Siempre Viva 123",
+        "country": "AR",
+        "postal_code": "H3500ABC"
+      },
+      "createdAt": "2025-11-20T01:27:52.055Z",
+      "updatedAt": "2025-11-20T01:27:52.055Z",
+      "logs": [
+        {
+          "id": 1,
+          "shipping_id": 1,
+          "status": "created",
+          "message": "Envío creado y pendiente de recolección.",
+          "createdAt": "2025-11-20T01:27:52.247Z",
+          "updatedAt": "2025-11-20T01:27:52.247Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "user_id": 15,
+      "status": "non-serviceable",
+      "transport_type": "air",
+      "departure_postal_code": "C2000BBB",
+      "estimated_delivery_at": "2025-11-26T12:15:33.000Z",
+      "shipping_cost": 5400,
+      "cancelled_at": null,
+      "delivery_address_json": {
+        "city": "Corrientes",
+        "state": "Corrientes",
+        "street": "San Martín 890",
+        "country": "AR",
+        "postal_code": "H3400XYZ"
+      },
+      "createdAt": "2025-11-20T15:12:10.000Z",
+      "updatedAt": "2025-11-20T15:12:10.000Z",
+      "logs": [
+        {
+          "id": 3,
+          "shipping_id": 2,
+          "status": "non-serviceable",
+          "message": "Zona no disponible para entrega.",
+          "createdAt": "2025-11-20T15:20:00.000Z",
+          "updatedAt": "2025-11-20T15:20:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "user_id": 20,
+      "status": "error",
+      "transport_type": "road",
+      "departure_postal_code": "C3000CCC",
+      "estimated_delivery_at": "2025-11-25T18:00:00.000Z",
+      "shipping_cost": 2200,
+      "cancelled_at": null,
+      "delivery_address_json": {
+        "city": "Saenz Peña",
+        "state": "Chaco",
+        "street": "Belgrano 450",
+        "country": "AR",
+        "postal_code": "H3700KLM"
+      },
+      "createdAt": "2025-11-20T10:00:00.000Z",
+      "updatedAt": "2025-11-20T10:00:00.000Z",
+      "logs": [
+        {
+          "id": 5,
+          "shipping_id": 3,
+          "status": "error",
+          "message": "Fallo en la validación de datos.",
+          "createdAt": "2025-11-20T10:05:00.000Z",
+          "updatedAt": "2025-11-20T10:05:00.000Z"
+        }
+      ]
+    }
+  ]
+}
