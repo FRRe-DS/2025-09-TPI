@@ -1,11 +1,12 @@
+// src/models/ShippingLog.ts
 import {
   Table,
   Column,
   Model,
   DataType,
   ForeignKey,
-  BelongsTo,
   AllowNull,
+  BelongsTo,
 } from 'sequelize-typescript';
 import Shipping from './shippings';
 
@@ -16,8 +17,7 @@ class ShippingLog extends Model {
   @Column(DataType.INTEGER)
   declare shipping_id: number;
 
-  @BelongsTo(() => Shipping)
-  declare shipping: Shipping;
+
 
   @AllowNull(false)
   @Column(
@@ -25,10 +25,10 @@ class ShippingLog extends Model {
       'created',
       'reserved',
       'in_transit',
-      'arrived',
-      'in_distribution',
       'delivered',
-      'cancelled'
+      'cancelled',
+      'in_distribution',
+      'arrived'
     )
   )
   declare status: string;
@@ -36,6 +36,9 @@ class ShippingLog extends Model {
   @AllowNull(false)
   @Column(DataType.STRING)
   declare message: string;
+
+  @BelongsTo(() => Shipping)
+  declare shipping: Shipping;
 }
 
 export default ShippingLog;
