@@ -7,7 +7,7 @@ const router = Router();
 
 // RUTAS PROTEGIDAS (Requieren Token JWT)
 // 1. CREAR TRACKING
-router.post("/tracking", ShippingController.createShipping);
+router.post("/tracking", isAuthenticated,ShippingController.createShipping);
 // 2. OBTENER TRACKING ESPECÍFICO
 router.get("/tracking/:id",  ShippingController.getShippingById);
 // 3. ACTUALIZAR ESTADO

@@ -1,32 +1,35 @@
-interface ProductDetail {
-  id: string;
-  quantity: number;
-  weight_kg: number;
-  dimensions_cm: {
-    width: number;
-    height: number;
-    length: number;
-  };
+interface ProductDetailForCost {
+    id: string;
+    quantity: number;
+    price: number; // Precio unitario del producto
+    weight_kg: number;
+    // ... (dimensions_cm) ...
 }
 
 
-export const calculateShippingCost = (products: ProductDetail[]): number => {
-  
-  // Calcular la cantidad total de artículos
-  const totalQuantity = products.reduce((sum, product) => sum + product.quantity, 0);
 
-  //  Definir un precio base simulado por artículo
-  const BASE_PRICE_PER_ITEM = 500; 
-  const IVA_RATE = 0.21; 
+export const calculateShippingCost = (
+  products: ProductDetailForCost[],
+  transport_type: string
+): number => {
 
-  // costo base
-  const baseCost = totalQuantity * BASE_PRICE_PER_ITEM;
+  // 1. Calcular el valor total de los productos
+  const totalValue = products.reduce(
+    (sum, product) => sum + product.price * product.quantity,
+    0
+  );
 
-  // IVA
-  const taxAmount = baseCost * IVA_RATE;
+  // 2. Costos por tipo de transporte
+  let CONSTrans = 0;
 
-  // total
-  const totalCost = baseCost + taxAmount;
+  if (transport_type === "road") {
+    CONSTrans = 20;
+  } else if (transport_type === "air") {
+    CONSTrans = 50;
+  }
+
+  // 3. Total
+  const totalCost = totalValue + CONSTrans;
 
   return parseFloat(totalCost.toFixed(2));
 };
