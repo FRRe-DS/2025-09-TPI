@@ -3,6 +3,8 @@ import { ShippingController } from "../controllers/shippingController";
 import { validateShippingCost } from "../middlewares/validateShippingInput";
 import { isAuthenticated } from "../middlewares/authMiddleware"
 
+
+
 const router = Router();
 
 // RUTAS PROTEGIDAS (Requieren Token JWT)
@@ -18,7 +20,7 @@ router.get("/transport-methods", ShippingController.getShippingMethods);
 
 // RUTAS PÚBLICAS O DE BAJO RIESGO (No requieren Token)
 // 5. COTIZACIÓN
-router.post("/cost", validateShippingCost, ShippingController.calculateCost);
+router.post("/cost",  ShippingController.calculateCost);
 // 6. LISTADO DE ESTADOS VÁLIDOS
 router.get("/statuses", ShippingController.getShippingStatuses);
 
