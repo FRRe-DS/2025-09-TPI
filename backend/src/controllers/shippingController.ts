@@ -279,5 +279,51 @@ export class ShippingController {
             message: "Error interno del servidor al obtener estados." 
         });
     }
+   
+  
 }
+  static getShippingMethods = (req: Request, res: Response): Response => {
+    try {
+      const methods = [
+        {
+          id: "air",
+          nombre: "Aire",
+          descripcion: "Envio por aire",
+          dias_entrega: 3, 
+          costo_base: 70
+        },
+        {
+          id: "road",
+          nombre: "Terrestre",
+          descripcion: "Envio por ruta",
+          dias_entrega: 4, 
+          costo_base: 60
+        },
+        {
+          id: "rail",
+          nombre: "Ferroviario",
+          descripcion: "Envio por tren",
+          dias_entrega: 10,
+          costo_base: 40
+        },
+        {
+          id: "express",
+          nombre: "Express",
+          descripcion: "Envio con prioridad de entrega",
+          dias_entrega: 2, 
+          costo_base: 80
+        }, 
+        {
+          id: "sea",
+          nombre: "Maritimo",
+          descripcion: "Envio por mar/rio",
+          dias_entrega: 15, 
+          costo_base: 50
+        }
+      ];
+      return res.status(200).json({ success: true, data: methods });
+    } catch (error) {
+      console.error("Error en getShippingMethods:", error);
+      return res.status(500).json({ success: false, message: "Error interno del servidor al obtener métodos de transporte." });
+    }}
 }

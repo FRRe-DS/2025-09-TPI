@@ -14,6 +14,7 @@ router.get("/tracking/:id",  ShippingController.getShippingById);
 router.patch("/:id/status",  ShippingController.updateShippingStatus);
 // 4. LISTAR POR USUARIO
 router.get("/users/:id/",  ShippingController.getShippingsByUser);
+router.get("/transport-methods", ShippingController.getShippingMethods);
 
 // RUTAS PÚBLICAS O DE BAJO RIESGO (No requieren Token)
 // 5. COTIZACIÓN
