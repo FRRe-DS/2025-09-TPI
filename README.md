@@ -307,9 +307,12 @@ curl https://api-logisticautn-1.onrender.com/api/logistics/transport-methods
 **Grupo N°9 – UTN FRRe (Resistencia, Chaco, Argentina)**
 
 ### Integrantes
-- 👤 **Ruiz Diaz Javier A.**
-- 👤 **Jorge Eduardo Villaverde**
-- 👤 **Romero Sebastian**
+- Franco, Rodrigo Roman
+- Miño, Alberto Ramón
+- Ramirez, Juan Ángel
+- Romero, Sebastián Pablo
+- Seeleff, Mauricio Javier
+- Solari, Xiomara Oriana
 
 ### Información Académica
 - **Materia:** Desarrollo de Software
