@@ -18,6 +18,7 @@ interface ProductDetail {
 
 export class ShippingController {
   static createShipping = async (req: AuthenticatedRequest, res: Response) => {
+  
     const DEFAULT_DEPARTURE_CP = "C1000AAA";
     const authenticatedUserId = req.user?.id;
 
@@ -40,9 +41,9 @@ export class ShippingController {
 
       //  Integración
       const detailedProducts = await fetchDetailedProducts(products);
-      const transportTypeEnum = mapTransportTypeToEnum(transport_type);
+      const transport_type_base= mapTransportTypeToEnum(transport_type)
       const estimatedDeliveryAt = calculateDeliveryDate(transport_type);
-      const finalShippingCost = calculateShippingCost(detailedProducts);
+      const finalShippingCost = calculateShippingCost(detailedProducts, transport_type_base);
 
       //  Crear el registro de envío
       const shipping = await Shipping.create(
@@ -55,7 +56,7 @@ export class ShippingController {
 
           delivery_address_json: delivery_address,
 
-          transport_type: transportTypeEnum,
+          transport_type: transport_type_base,
           departure_postal_code: DEFAULT_DEPARTURE_CP,
           estimated_delivery_at: estimatedDeliveryAt,
         },
@@ -232,14 +233,14 @@ export class ShippingController {
         const { transportMethod, products } = req.body; 
 
         //  Obtener el costo total del envío
-        const cost = calculateShippingCost(products as ProductDetail[]); 
+     
         
         // Simular los días estimados (basado en el método de transporte)
         const estimatedDays = transportMethod === 'express' ? 2 : 5; 
         
         return res.status(200).json({
             success: true,
-            cost,
+          
             currency: "PESOS", 
             estimated_days: estimatedDays,
         });
