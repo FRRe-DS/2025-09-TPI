@@ -1178,11 +1178,6 @@ La API está diseñada para integrarse fácilmente con los módulos de Compras y
 **Institución:** Universidad Tecnológica Nacional - Facultad Regional Resistencia  
 **Módulo:** Transporte, Logística y Seguimiento
 
----
-
-
----
-
 
 Proyecto académico - UTN FRRe 2025
 

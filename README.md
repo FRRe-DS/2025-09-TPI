@@ -323,8 +323,6 @@ curl https://api-logisticautn-1.onrender.com/api/logistics/transport-methods
 
 ---
 
-## 📞 Soporte
-
 ### ¿Necesitas Ayuda?
 
 1. **Instalación:** Consulta **[INSTALACION.md](./INSTALACION.md)**
@@ -358,12 +356,6 @@ Todos los derechos reservados - Grupo N°9 - 2025
 - [x] Deployment en Render (producción)
 - [x] API pública accesible 24/7
 
-### En Desarrollo
-- [ ] Tests unitarios y de integración
-- [ ] Panel de administración
-- [ ] Notificaciones en tiempo real (WebSockets)
-- [ ] Swagger/OpenAPI documentation
-
 ---
 
 ## 🔗 Enlaces Importantes
@@ -375,60 +367,5 @@ Todos los derechos reservados - Grupo N°9 - 2025
 | **Guía de Instalación** | [INSTALACION.md](./INSTALACION.md) |
 | **Documentación API** | [API_DOCUMENTATION.md](./API_DOCUMENTATION.md) |
 
----
 
-## 📝 Convenciones del Proyecto
 
-### Commits
-```
-feat: nueva funcionalidad
-fix: corrección de bug
-docs: cambios en documentación
-refactor: refactorización de código
-test: agregar o modificar tests
-```
-
-### Branches
-```
-main           - Producción
-develop        - Desarrollo
-feature/nombre - Nuevas funcionalidades
-fix/nombre     - Correcciones
-```
-
----
-
-## 🚀 Próximos Pasos para Nuevos Desarrolladores
-
-1. **Lee la documentación completa:**
-   - Comienza con **[INSTALACION.md](./INSTALACION.md)**
-   - Luego revisa **[API_DOCUMENTATION.md](./API_DOCUMENTATION.md)**
-
-2. **Configura tu entorno local:**
-   - Sigue los pasos de instalación
-   - Verifica que todo funcione
-
-3. **Explora el código:**
-   - Revisa los controladores en `backend/src/controllers/`
-   - Entiende los modelos en `backend/src/models/`
-   - Analiza las rutas en `backend/src/routes/`
-
-4. **Prueba la API:**
-   - Usa Postman o Thunder Client
-   - Prueba todos los endpoints
-   - Verifica las respuestas
-
-5. **Contribuye:**
-   - Crea una rama para tus cambios
-   - Sigue las convenciones del proyecto
-   - Documenta tus cambios
-
----
-
-**Desarrollado con ❤️ por el Grupo N°9 - UTN FRRe**
-
-*Para más información, consulta la documentación detallada en los archivos .md*
-
----
-
-**¿Primera vez aquí? → Comienza por [INSTALACION.md](./INSTALACION.md) 📖**
